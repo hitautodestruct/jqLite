@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqLite standalone</title>
+    
+    <style> .mark { color: blue !important; } </style>
+</head>
+<body>
+   
+   <ul>
+       <li class="loui-1">Loui 1</li>
+       <li class="loui-2">Loui 2</li>
+       <li class="loui-3">Loui 3</li>
+   </ul>
+    
+<!--
+    <script src="minErr.js"></script>
+    <script src="Angular.js"></script>
+    <script src="jqLite.js"></script>
+-->
+    
+    <script src="./dist/jqlite.min.js"></script>
+    <script>
+        
+        var $ = JQLite;
+        
+        var $li = JQLite('li');
+        
+        $li.css('color','red').on('click', function(){
+            
+            $(this).toggleClass('mark');
+            
+        });
+        
+    </script>
+    
+</body>
+</html>
